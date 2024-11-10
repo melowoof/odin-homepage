@@ -1,0 +1,224 @@
+html {
+  /* background-color: rgb(13, 15, 18); */
+  /* color: white; */
+}
+
+* {
+  outline: 1px dotted black;
+}
+
+.hero-container,
+.work-container,
+.footer-container {
+  outline: 1px dotted black;
+  padding: 2rem;
+  margin: 2rem;
+  display: grid;
+}
+
+.hero-container .about {
+  align-items: center;
+  margin: auto;
+}
+
+.hero-container h1,
+.hero-container p,
+.about .link-container a {
+  outline: 1px dotted black;
+}
+
+.about .link-container {
+  display: flex;
+  gap: 2rem;
+  justify-content: end;
+}
+
+.about .link-container a img {
+  width: 25px;
+  height: 25px;
+}
+
+.about p,
+.about h1 {
+  padding-right: 1rem;
+}
+
+.hero-container picture > img {
+  max-width: 50%;
+  float: left;
+  margin: 1rem;
+}
+
+.work-container {
+  display: grid;
+  grid-template-rows: auto;
+  grid-auto-rows: 20rem;
+  grid-template-columns: repeat(3, minmax(200px, 1fr));
+  gap: 40px;
+}
+
+.work-container h1 {
+  outline: 1px dotted black;
+  display: grid;
+  align-items: center;
+  grid-column: span 3;
+  padding: 0 1rem;
+  /* color: white;
+  text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000,
+    -1px -1px 0 #000; */
+  /* background-color: red; */
+}
+
+.work-container .project-container {
+  outline: 1px dotted black;
+  transition: transform 0.2s;
+}
+
+.work-container .project-container:hover {
+  transform: scale(1.02);
+}
+
+.work-container .project-container .preview {
+  outline: 1px dotted black;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  height: 200px;
+  color: white;
+}
+
+.work-container .project-container:nth-child(6n + 1) .preview {
+  background-color: rgb(98, 160, 206);
+}
+
+.work-container .project-container:nth-child(6n + 2) .preview {
+  background-color: rgb(145, 42, 36);
+}
+
+.work-container .project-container:nth-child(6n + 3) .preview {
+  background-color: rgb(123, 117, 196);
+}
+
+.work-container .project-container:nth-child(6n + 4) .preview {
+  background-color: rgb(105, 142, 84);
+}
+
+.work-container .project-container:nth-child(6n + 5) .preview {
+  background-color: rgb(183, 104, 176);
+}
+
+.work-container .project-container:nth-child(6n + 6) .preview {
+  background-color: rgb(205, 146, 74);
+}
+
+.work-container .project-desc-container {
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.work-container .project-name {
+  outline: 1px dotted black;
+  flex-basis: 80%;
+  font-weight: 700;
+}
+
+.work-container .project-link-container {
+  outline: 1px dotted black;
+  /* background-color: rgb(98, 160, 206); */
+  flex-basis: 20%;
+  /* border-radius: 0 0 15px 15px; */
+}
+
+.work-container .project-desc {
+  outline: 1px dotted black;
+  /* padding: 0 0.5rem; */
+  flex-basis: 100%;
+  font-weight: 400;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  /* background-color: red; */
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer-container .contact-info-container {
+  flex-basis: 40%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.footer-container .contact-info-container h1,
+.footer-container .contact-info-container p {
+  margin: 0;
+}
+
+.footer-container .link-container a img {
+  width: 30px;
+  height: 30px;
+}
+
+.footer-container .link-container {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer-container .footer-image {
+  flex-basis: 60%;
+}
+
+.footer-container .footer-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  padding: 1rem;
+}
+
+@media (max-width: 1000px) {
+  .work-container {
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+  }
+
+  .work-container h1 {
+    grid-column: span 2;
+  }
+
+  .footer-container .contact-info-container {
+    flex-basis: 60%;
+  }
+
+  .footer-container .footer-image {
+    flex-basis: 40%;
+  }
+}
+
+@media (max-width: 800px) {
+  .work-container {
+    grid-template-columns: repeat(1, minmax(200px, 1fr));
+  }
+
+  .work-container h1 {
+    grid-column: span 1;
+  }
+
+  .footer-container .contact-info-container {
+    flex-basis: 100%;
+  }
+
+  .footer-container .contact-info-container .link-container {
+    justify-content: center;
+  }
+
+  .footer-container .footer-image {
+    flex-basis: 100%;
+    width: 100%;
+  }
+}
